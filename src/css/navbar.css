@@ -1,0 +1,30 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  padding: var(--spacing-medium) var(--spacing-large);
+  background-image: var(--color-primary);
+  color: var(--text-color-primary);
+}
+
+.navbar__logo-container {
+  /* background-color: aqua; */
+}
+.navbar__links-container {
+  flex-grow: 1;
+  background-color: pink;
+}
+.navbar__links a {
+  color: inherit;
+}
+.navbar__toggle-button-container {
+  background-color: green;
+}

@@ -1,0 +1,12 @@
+:root {
+  /* COLORS */
+  --primary-color: red;
+  --secondary-color: pink;
+  --primary-text-color: black;
+
+  /* SPACING */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-x-large: 3rem;
+}

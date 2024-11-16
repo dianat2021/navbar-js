@@ -23,7 +23,7 @@ header {
   font-family: Lato-Regular, sans-serif;
   font-weight: bold;
 }
-
+/* LOGO STYLES --------------------------- */
 .navbar__logo-container {
   width: 48px;
   height: 48px;
@@ -37,7 +37,7 @@ header {
   width: 32px;
   height: 32px;
 }
-
+/* LINKS STYLES --------------------------- */
 .navbar__links-container {
   flex-grow: 1;
   /* background-color: pink; */
@@ -54,9 +54,15 @@ header {
   font-size: var(--font-size-medium);
 }
 .navbar__link a:hover {
-  color: #e0e0e0;
+  color: var(--hover-color);
 }
-
+.navbar__link--active {
+  border-bottom: 1px solid var(--text-color-primary);
+}
+.navbar__link--active:hover {
+  border-bottom: 1px solid var(--hover-color);
+}
+/* TOGGLE BUTTON STYLES --------------------------- */
 .navbar__toggle-button-container {
   display: flex;
   justify-content: center;
@@ -73,15 +79,13 @@ header {
 }
 .navbar__toggle-logo {
   display: block;
-  width: 32px;
-  height: 32px;
   color: var(--text-color-primary);
   visibility: hidden;
 }
-.navbar__link--active {
-  border-bottom: 1px solid var(--text-color-primary);
+.navbar__toggle-logo:hover {
+  color: var(--hover-color);
 }
-/* MEDIA QUERIES */
+/* MEDIA QUERIES ---------------------------*/
 @media screen and (max-width: 768px) {
   .navbar__toggle-logo {
     visibility: visible;

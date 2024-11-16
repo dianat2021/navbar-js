@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+
     <title>Responsive Navbar</title>
   </head>
   <body>
@@ -13,13 +14,19 @@
       <nav class="navbar">
         <div class="navbar__logo-container">
           <a href="index.html">
-            <img src="./assets/icons/main-logo.svg" alt="Website main logo" />
+            <img
+              src="./assets/icons/main-logo.svg"
+              alt="Website main logo"
+              class="navbar__logo"
+            />
           </a>
         </div>
 
         <div class="navbar__links-container">
           <ul class="navbar__links">
-            <li class="navbar__link"><a href="#">Home</a></li>
+            <li class="navbar__link navbar__link--active">
+              <a href="#">Home</a>
+            </li>
             <li class="navbar__link"><a href="#">About</a></li>
             <li class="navbar__link"><a href="#">Program</a></li>
             <li class="navbar__link"><a href="#">Admissions</a></li>
@@ -34,7 +41,9 @@
             <img
               src="./assets/icons/menu-toggle-icon.svg"
               alt="Hamburger menu"
+              class="navbar__toggle-logo"
             />
+            <i class="fa-solid fa-bars"></i>
           </button>
         </div>
       </nav>

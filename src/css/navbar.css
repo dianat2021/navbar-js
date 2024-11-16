@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Lato-Regular;
+  src: url("../assets/fonts/Lato-Regular.ttf");
+}
+
 body {
+  min-width: 340px;
   width: 100%;
   height: 100vh;
 }
@@ -10,21 +16,93 @@ header {
 .navbar {
   width: 100%;
   display: flex;
+  align-items: center;
   padding: var(--spacing-medium) var(--spacing-large);
   background-image: var(--color-primary);
   color: var(--text-color-primary);
+  font-family: Lato-Regular, sans-serif;
+  font-weight: bold;
 }
 
 .navbar__logo-container {
-  /* background-color: aqua; */
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.navbar__logo {
+  width: 32px;
+  height: 32px;
+}
+
 .navbar__links-container {
   flex-grow: 1;
-  background-color: pink;
+  /* background-color: pink; */
 }
-.navbar__links a {
+.navbar__links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+.navbar__link a {
   color: inherit;
+  font-size: var(--font-size-medium);
 }
+.navbar__link a:hover {
+  color: #e0e0e0;
+}
+
 .navbar__toggle-button-container {
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__toggle-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+.navbar__toggle-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--text-color-primary);
+  visibility: hidden;
+}
+.navbar__link--active {
+  border-bottom: 1px solid var(--text-color-primary);
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-logo {
+    visibility: visible;
+  }
+  .navbar__links {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    width: 50%;
+    flex-direction: column;
+    background-image: var(--color-primary);
+    backdrop-filter: blur(10px);
+    transition: 1s;
+  }
+
+  .navbar__links--active {
+    left: 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  .navbar__links {
+    width: 100%;
+  }
 }

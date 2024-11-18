@@ -1,8 +1,6 @@
 const toggleMenuButton = document.querySelector(".navbar__toggle-button");
 const navbarLinksContainer = document.querySelector(".navbar__links");
 const links = document.querySelectorAll(".navbar__link");
-// Set initial display state
-// navbarLinksContainer.style.display = "none";
 
 toggleMenuButton.addEventListener("click", () => {
   navbarLinksContainer.classList.toggle("navbar__links--active");
@@ -17,3 +15,5 @@ links.forEach((link) => {
     e.currentTarget.classList.add("navbar__link--active");
   });
 });
+
+// There are 2 active classes with link and links. pay attention

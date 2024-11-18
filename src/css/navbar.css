@@ -2,23 +2,20 @@
   font-family: Lato-Regular;
   src: url("../assets/fonts/Lato-Regular.ttf");
 }
-
 body {
   min-width: 340px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
-
 header {
   width: 100%;
 }
-
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
   padding: var(--spacing-medium) var(--spacing-large);
-  background-image: var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--text-color-primary);
   font-family: Lato-Regular, sans-serif;
   font-weight: bold;
@@ -40,7 +37,6 @@ header {
 /* LINKS STYLES --------------------------- */
 .navbar__links-container {
   flex-grow: 1;
-  /* background-color: pink; */
 }
 .navbar__links {
   height: 100%;
@@ -80,7 +76,7 @@ header {
 .navbar__toggle-logo {
   display: block;
   color: var(--text-color-primary);
-  visibility: hidden;
+  display: none;
 }
 .navbar__toggle-logo:hover {
   color: var(--hover-color);
@@ -88,7 +84,7 @@ header {
 /* MEDIA QUERIES ---------------------------*/
 @media screen and (max-width: 768px) {
   .navbar__toggle-logo {
-    visibility: visible;
+    display: block;
   }
   .navbar__links {
     position: absolute;
@@ -96,11 +92,10 @@ header {
     left: -1000px;
     width: 50%;
     flex-direction: column;
-    background-image: var(--color-primary);
+    background-color: var(--color-primary);
     backdrop-filter: blur(10px);
-    transition: 1s;
+    transition: left 1s;
   }
-
   .navbar__links--active {
     left: 0;
   }
